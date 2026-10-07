@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}New path &middot; PathForge{% endblock %}
+{% block content %}
+<div class="card narrow">
+  <h2>Create a learning path</h2>
+  <form method="post" novalidate id="generate-form">
+    {{ form.hidden_tag() }}
+    {% for f in [form.goal, form.level, form.hours_per_week, form.total_weeks, form.interests] %}
+      <label>{{ f.label.text }}{{ f(class_="input") }}</label>
+      {% for e in f.errors %}<p class="error">{{ e }}</p>{% endfor %}
+    {% endfor %}
+    <button class="btn full" type="submit" id="generate-btn">Generate my path</button>
+  </form>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/learning_path.js') }}"></script>{% endblock %}

@@ -1,0 +1,15 @@
+:root {
+  --ink: #0b1624; --ink-2: #13253b; --text: #e8eef6; --muted: #9db0c6;
+  --teal: #3fd0c0; --amber: #f2b45a; --violet: #8b7cf6; --danger: #ff7a7a;
+  --glass: rgba(19, 37, 59, .62); --line: rgba(255,255,255,.1);
+  --radius: 14px;
+}
+html { background: var(--ink); }
+body { margin: 0; color: var(--text); font-family: "Source Sans 3", system-ui, sans-serif; line-height: 1.55; min-height: 100vh; position: relative; }
+.aurora { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: radial-gradient(circle at 20% 0%, var(--ink-2), var(--ink) 70%); }
+.aurora span { position: absolute; width: 55vmax; height: 55vmax; border-radius: 50%; filter: blur(90px); opacity: .32; animation: drift 26s ease-in-out infinite alternate; }
+.aurora span:nth-child(1) { background: var(--teal); top: -20vmax; left: -15vmax; }
+.aurora span:nth-child(2) { background: var(--violet); bottom: -25vmax; right: -15vmax; animation-duration: 32s; }
+.aurora span:nth-child(3) { background: var(--amber); width: 30vmax; height: 30vmax; top: 40%; left: 55%; opacity: .14; animation-duration: 38s; }
+@keyframes drift { to { transform: translate(8vmax, 6vmax) scale(1.15); } }
+@media (prefers-reduced-motion: reduce) { .aurora span { animation: none; } }

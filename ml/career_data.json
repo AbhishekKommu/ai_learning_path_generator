@@ -1,0 +1,55 @@
+[
+  {"career": "Full-Stack Web Developer", "keywords": "web developer website frontend backend html css javascript flask django react full stack app",
+   "skills": [
+     {"topic": "HTML & CSS fundamentals", "level": "beginner", "resources": ["MDN Web Docs: Learn Web Development", "freeCodeCamp Responsive Web Design"]},
+     {"topic": "JavaScript essentials & the DOM", "level": "beginner", "resources": ["javascript.info", "Eloquent JavaScript (free online)"]},
+     {"topic": "Git & GitHub workflow", "level": "beginner", "resources": ["Pro Git book (free)", "GitHub Skills"]},
+     {"topic": "Python & Flask basics", "level": "intermediate", "resources": ["Flask official tutorial", "Real Python Flask guides"]},
+     {"topic": "REST APIs & JSON", "level": "intermediate", "resources": ["MDN: Fetch API", "Flask-RESTful / Flask docs"]},
+     {"topic": "SQL & SQLite/MySQL databases", "level": "intermediate", "resources": ["SQLBolt", "SQLAlchemy ORM tutorial"]},
+     {"topic": "Authentication & security basics", "level": "advanced", "resources": ["OWASP Top 10", "Flask-Login docs"]},
+     {"topic": "Testing & deployment", "level": "advanced", "resources": ["pytest docs", "Render / Railway deploy guides"]}
+   ]},
+  {"career": "Machine Learning Engineer", "keywords": "machine learning ml ai artificial intelligence model scikit-learn prediction classification regression deep learning",
+   "skills": [
+     {"topic": "Python for data work (NumPy, pandas)", "level": "beginner", "resources": ["pandas getting started", "Kaggle Python & Pandas courses"]},
+     {"topic": "Statistics & linear algebra basics", "level": "beginner", "resources": ["Khan Academy Statistics", "3Blue1Brown Essence of Linear Algebra"]},
+     {"topic": "Supervised learning with scikit-learn", "level": "intermediate", "resources": ["scikit-learn user guide", "Kaggle Intro to Machine Learning"]},
+     {"topic": "Feature engineering & model evaluation", "level": "intermediate", "resources": ["Kaggle Feature Engineering", "scikit-learn model evaluation guide"]},
+     {"topic": "Neural networks fundamentals", "level": "advanced", "resources": ["fast.ai Practical Deep Learning", "PyTorch tutorials"]},
+     {"topic": "Deploying models as APIs", "level": "advanced", "resources": ["Flask/FastAPI docs", "Made With ML MLOps course"]}
+   ]},
+  {"career": "Data Analyst", "keywords": "data analyst analytics sql excel dashboard visualization statistics business intelligence reports",
+   "skills": [
+     {"topic": "Spreadsheets & data cleaning", "level": "beginner", "resources": ["Google Sheets training", "Excel Easy"]},
+     {"topic": "SQL for analysis", "level": "beginner", "resources": ["SQLBolt", "Mode SQL Tutorial"]},
+     {"topic": "Python with pandas", "level": "intermediate", "resources": ["pandas docs", "Kaggle Pandas course"]},
+     {"topic": "Data visualization", "level": "intermediate", "resources": ["Matplotlib tutorials", "Storytelling with Data"]},
+     {"topic": "Statistics & A/B testing", "level": "advanced", "resources": ["Khan Academy Statistics", "Trustworthy Online Controlled Experiments"]},
+     {"topic": "Dashboards & reporting", "level": "advanced", "resources": ["Power BI Learn", "Tableau Public training"]}
+   ]},
+  {"career": "NLP / LLM Application Developer", "keywords": "nlp natural language processing llm chatbot gpt claude prompt text language model transformers rag",
+   "skills": [
+     {"topic": "Python & text processing", "level": "beginner", "resources": ["Python docs tutorial", "NLTK Book (free)"]},
+     {"topic": "Classic NLP: TF-IDF, classification", "level": "intermediate", "resources": ["scikit-learn text feature extraction", "spaCy course"]},
+     {"topic": "Working with LLM APIs & prompting", "level": "intermediate", "resources": ["Anthropic prompt engineering docs", "DeepLearning.AI short courses"]},
+     {"topic": "Embeddings & retrieval (RAG)", "level": "advanced", "resources": ["Sentence-Transformers docs", "LangChain / LlamaIndex tutorials"]},
+     {"topic": "Evaluating and shipping LLM apps", "level": "advanced", "resources": ["Hugging Face course", "Flask deployment guides"]}
+   ]},
+  {"career": "Cybersecurity Analyst", "keywords": "cybersecurity security hacking network penetration ethical hacker soc defense vulnerability",
+   "skills": [
+     {"topic": "Networking fundamentals", "level": "beginner", "resources": ["Professor Messer Network+", "Cisco Networking Basics"]},
+     {"topic": "Linux & command line", "level": "beginner", "resources": ["OverTheWire Bandit", "Linux Journey"]},
+     {"topic": "Security concepts & threats", "level": "intermediate", "resources": ["TryHackMe Pre-Security", "OWASP Top 10"]},
+     {"topic": "Web & network vulnerability testing", "level": "intermediate", "resources": ["PortSwigger Web Security Academy", "TryHackMe Jr Penetration Tester"]},
+     {"topic": "Incident response & monitoring", "level": "advanced", "resources": ["Blue Team Labs Online", "NIST Incident Handling Guide"]}
+   ]},
+  {"career": "Mobile App Developer", "keywords": "mobile app android ios flutter kotlin swift react native phone",
+   "skills": [
+     {"topic": "Programming basics (Dart or Kotlin)", "level": "beginner", "resources": ["Dart language tour", "Kotlin Koans"]},
+     {"topic": "UI layouts & navigation", "level": "intermediate", "resources": ["Flutter codelabs", "Android Basics with Compose"]},
+     {"topic": "State management & local storage", "level": "intermediate", "resources": ["Flutter state management docs", "Room database guide"]},
+     {"topic": "Networking & REST APIs", "level": "intermediate", "resources": ["Flutter networking cookbook", "Retrofit docs"]},
+     {"topic": "Publishing to app stores", "level": "advanced", "resources": ["Google Play Console help", "Apple App Store Connect guide"]}
+   ]}
+]

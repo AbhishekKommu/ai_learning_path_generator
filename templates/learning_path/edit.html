@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Edit path &middot; PathForge{% endblock %}
+{% block content %}
+<div class="card narrow">
+  <h2>Edit path</h2>
+  <form method="post" novalidate>
+    {{ form.hidden_tag() }}
+    {% for f in [form.title, form.notes] %}
+      <label>{{ f.label.text }}{{ f(class_="input") }}</label>
+      {% for e in f.errors %}<p class="error">{{ e }}</p>{% endfor %}
+    {% endfor %}
+    <div class="row"><button class="btn" type="submit">Save changes</button>
+      <a class="btn ghost" href="{{ url_for('main.view_path', path_id=path.id) }}">Cancel</a></div>
+  </form>
+</div>
+{% endblock %}

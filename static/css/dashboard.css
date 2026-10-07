@@ -1,0 +1,3 @@
+.path-card h3 { margin-bottom: 4px; }
+.path-card h3 a { color: var(--text); text-decoration: none; }
+.path-card .row { margin-top: 10px; }

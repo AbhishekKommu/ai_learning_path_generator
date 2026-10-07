@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}My paths &middot; PathForge{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h2>Your learning paths</h2>
+  <a class="btn" href="{{ url_for('main.generate') }}">New path</a>
+</div>
+{% if paths %}
+<div class="grid2">
+  {% for p in paths %}
+  <article class="card path-card">
+    <h3><a href="{{ url_for('main.view_path', path_id=p.id) }}">{{ p.title }}</a></h3>
+    <p class="muted">{{ p.goal }} &middot; {{ p.level }} &middot; {{ p.total_weeks }} weeks</p>
+    <div class="bar"><div class="fill" style="width: {{ p.progress }}%"></div></div>
+    <p class="small">{{ p.progress }}% complete</p>
+    <div class="row">
+      <a class="btn small ghost" href="{{ url_for('main.view_path', path_id=p.id) }}">Open</a>
+      <a class="btn small ghost" href="{{ url_for('main.edit_path', path_id=p.id) }}">Edit</a>
+      <form method="post" action="{{ url_for('main.delete_path', path_id=p.id) }}" class="inline" data-confirm="Delete this path?">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button class="btn small danger">Delete</button>
+      </form>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<div class="card empty"><h3>No paths yet</h3><p>Generate your first plan in under a minute.</p>
+  <a class="btn" href="{{ url_for('main.generate') }}">Create a learning path</a></div>
+{% endif %}
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>{% endblock %}

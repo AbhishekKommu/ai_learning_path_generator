@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ path.title }} &middot; PathForge{% endblock %}
+{% block content %}
+{% block banner %}{% endblock %}
+<div class="page-head">
+  <div>
+    <h2>{{ path.title }}</h2>
+    <p class="muted">{{ path.plan.summary }}</p>
+  </div>
+  <div class="row">
+    <a class="btn small ghost" href="{{ url_for('main.edit_path', path_id=path.id) }}">Edit</a>
+    <a class="btn small ghost" href="{{ url_for('main.dashboard') }}">All paths</a>
+  </div>
+</div>
+<div class="bar big"><div class="fill" id="progress-fill" style="width: {{ path.progress }}%"></div></div>
+<p class="small"><span id="progress-text">{{ path.progress }}</span>% complete &middot; made with {{ 'Claude' if path.source == 'llm' else 'the built-in recommender' }}</p>
+{% if path.plan.notes %}<div class="card note">{{ path.plan.notes }}</div>{% endif %}
+<div class="timeline" data-toggle-url="{{ url_for('main.toggle_week', path_id=path.id, week=0) }}">
+  {% for w in path.plan.weeks %}
+  <article class="week card {{ 'done' if w.done }}">
+    <label class="check">
+      <input type="checkbox" data-week="{{ w.week }}" {{ 'checked' if w.done }}>
+      <span><strong>Week {{ w.week }}:</strong> {{ w.title }}</span>
+    </label>
+    <ul>{% for t in w.topics %}<li>{{ t }}</li>{% endfor %}</ul>
+    {% if w.resources %}<p class="small muted">Resources: {{ w.resources | join(', ') }}</p>{% endif %}
+  </article>
+  {% endfor %}
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/learning_path.js') }}"></script>{% endblock %}

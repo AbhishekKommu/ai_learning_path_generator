@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Sign up &middot; PathForge{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">{% endblock %}
+{% block content %}
+<div class="auth-card card">
+  <h2>Create your account</h2>
+  <form method="post" novalidate data-auth>
+    {{ form.hidden_tag() }}
+    {% for f in [form.name, form.email, form.password, form.confirm] %}
+      <label>{{ f.label.text }}{{ f(class_="input") }}</label>
+      {% for e in f.errors %}<p class="error">{{ e }}</p>{% endfor %}
+    {% endfor %}
+    <button class="btn full" type="submit">Create account</button>
+  </form>
+  <p class="muted">Already registered? <a href="{{ url_for('auth.login') }}">Log in</a></p>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/auth.js') }}"></script>{% endblock %}
